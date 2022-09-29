@@ -1,0 +1,19 @@
+
+        p{
+            background-color: bisque;
+            color: brown;
+            text-align: center;
+        }
+
+        #para{
+            background-color: aliceblue;
+            color: rebeccapurple;
+            text-align: justify;
+        }
+
+        .para{
+            background-color: aquamarine;
+            background-color: blueviolet;
+            text-align: justify;
+        }
+   
