@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id = "button" onclick="clickCount()">Click Me</button>
+    <p >
+        Clicked the button <span id="display">0</span> times
+    </p>
+    <script>
+        var count = 0;
+        var button = document.getElementById("button");
+        var output = document.getElementById("display");
+        function clickCount(){
+            count++;
+            output.innerHTML = count;
+        }
+    </script>
+</body>
+</html>
