@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Current Day and Time</title>
 </head>
 <body>
-   
+    <div class="content">
+        <div class="day" class="time"> </div>
+        <div class="time"></div> 
+    </div>
+
+   <script>
+        let today = new Date();
+        let day = today.getDay();
+        let daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+        document.querySelector(".day").innerHTML = "Today is : " + daylist[day] + ".";
+
+        let hour = today.getHours();
+        let minute = today.getMinutes();
+        let second = today.getSeconds();
+        let twelveHourStandard = (hour >= 12) ? " PM" : " AM";
+        hour = (hour >= 12) ? hour - 12 : hour;
+        if(hour == 0 && twelveHourStandard == " PM"){
+            if(minute == 0 && second == 0){
+                hour = 12;
+                twelveHourStandard = " Noon"
+            }else{
+                hour = 12;
+                twelveHourStandard = " PM"
+            }
+        }
+        if(hour == 0 && twelveHourStandard == " PM"){
+            if(minute == 0 && second == 0){
+                hour = 12;
+                twelveHourStandard = " Midnight"
+            }else{
+                hour = 12;
+                twelveHourStandard = " AM"
+            }
+        }
+        document.querySelector(".time").innerHTML = " Current time is: " + hour + twelveHourStandard + " : " + minute + " : " + second;
+   </script>
 </body>
 </html>

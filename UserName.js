@@ -22,4 +22,4 @@ console.log(u1.username);
 u2 = new User("marysue1989");
 console.log(u2.username);
 u3 = new User("milan_rodrick")
-console.log(u3.username)
+console.log(u3.username);
