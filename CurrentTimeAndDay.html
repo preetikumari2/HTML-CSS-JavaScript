@@ -8,15 +8,15 @@
 </head>
 <body>
     <div class="content">
-        <div class="day" class="time"> </div>
-        <div class="time"></div> 
+    <!--    <div class="day"> </div> -->
+        <div class="day-time"></div> 
     </div>
 
    <script>
         let today = new Date();
         let day = today.getDay();
         let daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-        document.querySelector(".day").innerHTML = "Today is : " + daylist[day] + ".";
+    //    document.querySelector(".day").innerHTML = "Today is : " + daylist[day] + ".";
 
         let hour = today.getHours();
         let minute = today.getMinutes();
@@ -41,7 +41,7 @@
                 twelveHourStandard = " AM"
             }
         }
-        document.querySelector(".time").innerHTML = " Current time is: " + hour + twelveHourStandard + " : " + minute + " : " + second;
+        document.querySelector(".day-time").innerHTML ="Today is : " + daylist[day] + "." + "  Current time is: " + hour + twelveHourStandard + " : " + minute + " : " + second;
    </script>
 </body>
 </html>
