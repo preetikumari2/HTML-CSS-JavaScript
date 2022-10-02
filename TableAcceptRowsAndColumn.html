@@ -12,19 +12,11 @@
     </style>
 </head>
 <body>
-    <table class="myTable" border="2">
-        <tr>
-            <td>1 1</td>
-            <td>1 2</td>
-        </tr>
-        <tr>
-            <td>2 1</td>
-            <td>2 2</td>
-        </tr>
-    </table>
-    <form >
-        <input type="button" onclick="createTable()" value="Create table">
-    </form>
+    <h3 style="text-align:center">Creating a table</h3><br><br>
+    <table id="myTable"></table>
+    <div style="text-align:center;">
+        <button  onclick="createTable()">click to Create</button>
+    </div>
     <script>
         function createTable(){
             rowNumber = window.prompt("Input Row number", 1);
