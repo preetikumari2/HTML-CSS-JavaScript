@@ -7,167 +7,163 @@
     <title>Color Guessing Game</title>
     <style>
         body{
-            margin: 0px;
-            background-color: aquamarine;
-            color: white;
+            background-color: antiquewhite;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
             font-family:'Courier New', Courier, monospace;
         }
-        .container{
-            padding: 60px;
-           
-        }
-        h1{
-            margin: 0px;
-            background-color: rgb(250, 87, 87);
-            font-weight: normal;
+        #colorName{
             text-align: center;
-            font-size: 150%;
+            font-size: xxx-large;
+            margin-top: 10px;
         }
-        .rgbSpan{
-            font-size: 150%;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        .line{
-            width: 100%;
-            height: 40px;
+        #box{
             text-align: center;
-            background-color: white;
-            padding: 0px;
+            justify-content: space-around;  
+            margin-top: 10px;
         }
-        .status{
-            color: rgb(250, 87, 87);
-            width: 20%;
-            display: inline-block;
-            font-weight: 900px;
+        .btn{
+            height: 70px;
+            width: 70px;
+            border-radius: 20%;
+            margin: 10px;
+            cursor: pointer;
+            border-style: solid;
+            border-width: 3px;
         }
-        button{
-            border: none;
-            background: none;
-            text-transform: uppercase;
-            height: 100%;
-            font-weight: 700px;
-            letter-spacing: 1px;
-            color: rgb(250, 87, 87);
-        }
-        .mainbox{
-            width: 400px;
-            margin: auto;
-            align-items: center;
-        }
-        .colorBox{
-            width: 15%;
-            background-color: white;
-            padding-bottom: 10%;
-            margin: 2%;
-            border-radius: 50px;
-            float: left;
+        #re{
+            text-align: center;
+            margin-top: 20px;
         }
 
-    
+        #replay{
+            height: 60px;
+            width: 120px;
+            font-size: large;
+            cursor: pointer;
+            background-color: brown;
+        }
+
     </style>
+    
 </head>
 <body>
-<div class="container">
-    <h1>
-        THE GREAT <br /> <span class ="rgbSpan">RGB(256, 256, 256)</span> <br /> GUESSING GAME
-    </h1>
-    <div class="line">
-        <button id="playAgain">New Colors</button>
-        <span class="status">Let's play</span>
-        <button class="easyBtn">EASY</button>
-        <button class="hardBtn">HARD</button>
+    <h2>
+        THE GREAT <br /> <p id="colorName">RGB(R, G, B)</p> GUESSING GAME
+    </h2>
+<!--    <p id="colorName">(R, G, B)</p>   -->
+    <div id="box">
+        <button class="btn" id="0" onclick="guess()"></button>
+        <button class="btn" id="1" onclick="guess()"></button>
+        <button class="btn" id="2" onclick="guess()"></button>
+        <button class="btn" id="3" onclick="guess()"></button> <br />
+        <button class="btn" id="4" onclick="guess()"></button>
+        <button class="btn" id="5" onclick="guess()"></button>
+        <button class="btn" id="6" onclick="guess()"></button>
+        <button class="btn" id="7" onclick="guess()"></button> <br/>
+        <button class="btn" id="8" onclick="guess()"></button>
+        <button class="btn" id="9" onclick="guess()"></button>
+        <button class="btn" id="10" onclick="guess()"></button>
+        <button class="btn" id="11" onclick="guess()"></button>
     </div>
-    <div class="mainColorBox">
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
-        <div class="colorBox"></div>
+    <div id="re">
+        <button id="replay" onclick="replay()">Replay</button>
     </div>
-</div>
-    
-</body>
-<script>
-    let colorBoxes = document.querySelectorAll('.colorBox')
-    let s = document.querySelector('.rgbSpan');
-    let colors = generateRandomColor(12)
-    let pickedColor = colors[Math.floor(Math.random() *15)];
-    s.textContent = pickedColor;
-    let playButton = document.querySelector('#playAgain');
-    let easyButton = document.querySelector('#easyBtn') 
-    let hardButton = document.querySelector('#hardBtn') 
-    let boxCount = 15;
-    let statusText = document.querySelector('.status');
-    statusText.textContent = "Let's Play!!";
+    <script>
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let r = Math.floor((Math.random()) *256);
+let g = Math.floor((Math.random()) *256);
+let b = Math.floor((Math.random()) *256);
 
-    hardButton.addEventListener('click', function(){
-        document.querySelector('h1').style.background = 'rgb(250, 87, 87)';
-        statusText.textContent = "Let's Play!!";
-        this.style.background = 'rgb(250, 87, 87)';
-        this.style.color = 'white';
-        easyButton.style.background = 'white';
-        easyButton.color.color = 'rgb(250, 87, 87)';
-        boxCount = 15;
-        colors = generateRandomColor(boxCount);
-        pickedColor = colors[Math.floor(Math.random() *15)];
-        for(let i = 0; i <= colorBoxes.length; i++){
-            colorBoxes[i].style.background = colors[i];
-            colorBoxes[i].style.display = 'block';
-        }
-    });
-    playButton.addEventListener('click', function(){
-        document.querySelector('h1').style.background = 'rgb(250, 87, 87)';
-        colors = generateRandomColor(boxCount);
-        pickedColor = colors[Math.floor(Math.random() *boxCount)];
-        rgb.textContent = pickedColor;
-        for(let i = 0; i < colorBoxes.length; i++){
-            colorBoxes[i].style.background = colors[i];
-        }
-    })
-    for(let i = 0; i < colors.length; i++){
-        colorBoxes[i].style.background = colors[i];
-        colorBoxes[i].addEventListener('click', function() {
-            let selectedColor = this.style.background;
-            if(selectedColor === pickedColor){
-                win();
-            } else{
-                loose(this);
-            }
-        });
+document.getElementById("colorName").innerHTML = "("+ r + " , "+ g +" , "+ b +")";
+let index = Math.floor((Math.random()) *12);
+document.getElementById(index).style.backgroundColor =  "rgb("+ r + " , "+ g +" , "+ b +")"; 
+arr.splice(index, 1);
+
+let r1 = Math.floor((Math.random()) *256);
+let g1 = Math.floor((Math.random()) *256);
+let b1 = Math.floor((Math.random()) *256);
+document.getElementById(arr[0]).style.backgroundColor =  "rgb("+ r1 + " , "+ g1 +" , "+ b1 +")";
+
+let r2 = Math.floor((Math.random()) *256);
+let g2 = Math.floor((Math.random()) *256);
+let b2 = Math.floor((Math.random()) *256);
+document.getElementById(arr[1]).style.backgroundColor =  "rgb("+ r2 + " , "+ g2 +" , "+ b2 +")";
+
+let r3 = Math.floor((Math.random()) *256);
+let g3 = Math.floor((Math.random()) *256);
+let b3 = Math.floor((Math.random()) *256);
+document.getElementById(arr[2]).style.backgroundColor =  "rgb("+ r3 + " , "+ g3 +" , "+ b3 +")";
+
+let r4 = Math.floor((Math.random()) *256);
+let g4 = Math.floor((Math.random()) *256);
+let b4 = Math.floor((Math.random()) *256);
+document.getElementById(arr[3]).style.backgroundColor =  "rgb("+ r4 + " , "+ g4 +" , "+ b4 +")";
+
+let r5 = Math.floor((Math.random()) *256);
+let g5 = Math.floor((Math.random()) *256);
+let b5 = Math.floor((Math.random()) *256);
+document.getElementById(arr[4]).style.backgroundColor =  "rgb("+ r5 + " , "+ g5 +" , "+ b5 +")";
+
+let r6 = Math.floor((Math.random()) *256);
+let g6 = Math.floor((Math.random()) *256);
+let b6 = Math.floor((Math.random()) *256);
+document.getElementById(arr[5]).style.backgroundColor =  "rgb("+ r6 + " , "+ g6 +" , "+ b6 +")";
+
+let r7 = Math.floor((Math.random()) *256);
+let g7 = Math.floor((Math.random()) *256);
+let b7 = Math.floor((Math.random()) *256);
+document.getElementById(arr[6]).style.backgroundColor =  "rgb("+ r7 + " , "+ g7 +" , "+ b7 +")";
+
+let r8 = Math.floor((Math.random()) *256);
+let g8 = Math.floor((Math.random()) *256);
+let b8 = Math.floor((Math.random()) *256);
+document.getElementById(arr[7]).style.backgroundColor =  "rgb("+ r8 + " , "+ g8 +" , "+ b8 +")";
+
+let r9 = Math.floor((Math.random()) *256);
+let g9 = Math.floor((Math.random()) *256);
+let b9 = Math.floor((Math.random()) *256);
+document.getElementById(arr[8]).style.backgroundColor =  "rgb("+ r9 + " , "+ g9 +" , "+ b9 +")";
+
+let r10 = Math.floor((Math.random()) *256);
+let g10 = Math.floor((Math.random()) *256);
+let b10 = Math.floor((Math.random()) *256);
+document.getElementById(arr[9]).style.backgroundColor =  "rgb("+ r10 + " , "+ g10 +" , "+ b10 +")";
+
+let r11 = Math.floor((Math.random()) *256);
+let g11 = Math.floor((Math.random()) *256);
+let b11 = Math.floor((Math.random()) *256);
+document.getElementById(arr[10]).style.backgroundColor =  "rgb("+ r11 + " , "+ g11 +" , "+ b11 +")";
+
+function guess(){
+    if(document.activeElement.id == index){
+        document.getElementById("colorName").innerHTML = "You Win!!";
+        document.getElementById("colorName").style.color = "darkgreen";
     }
-    function win(){
-        for(let i = 0; i < color.length; i++){
-            colorBoxes[i].style.background = pickedColor;
-        }
-        document.querySelector('h1').style.background = pickedColor;
-        statusText.textContent = 'You Won!!';
+    else{
+        document.getElementById("colorName").innerHTML = "Your Guess is Wrong !!";
+        document.getElementById("colorName").style.color = "red";
     }
-    function loose(a){
-        a.style.background = 'aquamarine';
-        statusText.textContent = 'try Again!';
-    }
-    function generateRandomColor(num){
-        let arr = [];
-        for(let i = 0; i < num ;  i++){
-            arr.push(randomColor());
-        }
-        return arr;
-    }
-    function randomColor(){
-        let r = Math.floor(Math.random() *256);
-        let g = Math.floor(Math.random() *256);
-        let b = Math.floor(Math.random() *256);
-        return 'rgb('+ r + ',' + g + ',' + b + ')';
-    }
-</script>
+    document.getElementsByClassName("btn")[0].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[1].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[2].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[3].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[4].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[5].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[6].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[7].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[8].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[9].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[10].removeAttribute("onclick");
+    document.getElementsByClassName("btn")[11].removeAttribute("onclick");
+}
+
+function replay(){
+    window.location.reload();
+}
+    </script>
+</body>
 </html>
