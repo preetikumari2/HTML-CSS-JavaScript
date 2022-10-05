@@ -44,7 +44,7 @@
             width: 120px;
             font-size: large;
             cursor: pointer;
-            background-color: brown;
+            background-color:aqua;
         }
 
     </style>
@@ -54,7 +54,9 @@
     <h2>
         THE GREAT <br /> <p id="colorName">RGB(R, G, B)</p> GUESSING GAME
     </h2>
-<!--    <p id="colorName">(R, G, B)</p>   -->
+    <div id="re">
+        <button id="replay" onclick="replay()">Restart</button>
+    </div>
     <div id="box">
         <button class="btn" id="0" onclick="guess()"></button>
         <button class="btn" id="1" onclick="guess()"></button>
@@ -69,101 +71,99 @@
         <button class="btn" id="10" onclick="guess()"></button>
         <button class="btn" id="11" onclick="guess()"></button>
     </div>
-    <div id="re">
-        <button id="replay" onclick="replay()">Replay</button>
-    </div>
+   
     <script>
         let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-let r = Math.floor((Math.random()) *256);
-let g = Math.floor((Math.random()) *256);
-let b = Math.floor((Math.random()) *256);
+        let r = Math.floor((Math.random()) *256);
+        let g = Math.floor((Math.random()) *256);
+        let b = Math.floor((Math.random()) *256);
 
-document.getElementById("colorName").innerHTML = "("+ r + " , "+ g +" , "+ b +")";
-let index = Math.floor((Math.random()) *12);
-document.getElementById(index).style.backgroundColor =  "rgb("+ r + " , "+ g +" , "+ b +")"; 
-arr.splice(index, 1);
+        document.getElementById("colorName").innerHTML = "("+ r + " , "+ g +" , "+ b +")";
+        let index = Math.floor((Math.random()) *12);
+        document.getElementById(index).style.backgroundColor =  "rgb("+ r + " , "+ g +" , "+ b +")"; 
+        arr.splice(index, 1);
 
-let r1 = Math.floor((Math.random()) *256);
-let g1 = Math.floor((Math.random()) *256);
-let b1 = Math.floor((Math.random()) *256);
-document.getElementById(arr[0]).style.backgroundColor =  "rgb("+ r1 + " , "+ g1 +" , "+ b1 +")";
+        let r1 = Math.floor((Math.random()) *256);
+        let g1 = Math.floor((Math.random()) *256);
+        let b1 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[0]).style.backgroundColor =  "rgb("+ r1 + " , "+ g1 +" , "+ b1 +")";
 
-let r2 = Math.floor((Math.random()) *256);
-let g2 = Math.floor((Math.random()) *256);
-let b2 = Math.floor((Math.random()) *256);
-document.getElementById(arr[1]).style.backgroundColor =  "rgb("+ r2 + " , "+ g2 +" , "+ b2 +")";
+        let r2 = Math.floor((Math.random()) *256);
+        let g2 = Math.floor((Math.random()) *256);
+        let b2 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[1]).style.backgroundColor =  "rgb("+ r2 + " , "+ g2 +" , "+ b2 +")";
 
-let r3 = Math.floor((Math.random()) *256);
-let g3 = Math.floor((Math.random()) *256);
-let b3 = Math.floor((Math.random()) *256);
-document.getElementById(arr[2]).style.backgroundColor =  "rgb("+ r3 + " , "+ g3 +" , "+ b3 +")";
+        let r3 = Math.floor((Math.random()) *256);
+        let g3 = Math.floor((Math.random()) *256);
+        let b3 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[2]).style.backgroundColor =  "rgb("+ r3 + " , "+ g3 +" , "+ b3 +")";
 
-let r4 = Math.floor((Math.random()) *256);
-let g4 = Math.floor((Math.random()) *256);
-let b4 = Math.floor((Math.random()) *256);
-document.getElementById(arr[3]).style.backgroundColor =  "rgb("+ r4 + " , "+ g4 +" , "+ b4 +")";
+        let r4 = Math.floor((Math.random()) *256);
+        let g4 = Math.floor((Math.random()) *256);
+        let b4 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[3]).style.backgroundColor =  "rgb("+ r4 + " , "+ g4 +" , "+ b4 +")";
 
-let r5 = Math.floor((Math.random()) *256);
-let g5 = Math.floor((Math.random()) *256);
-let b5 = Math.floor((Math.random()) *256);
-document.getElementById(arr[4]).style.backgroundColor =  "rgb("+ r5 + " , "+ g5 +" , "+ b5 +")";
+        let r5 = Math.floor((Math.random()) *256);
+        let g5 = Math.floor((Math.random()) *256);
+        let b5 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[4]).style.backgroundColor =  "rgb("+ r5 + " , "+ g5 +" , "+ b5 +")";
 
-let r6 = Math.floor((Math.random()) *256);
-let g6 = Math.floor((Math.random()) *256);
-let b6 = Math.floor((Math.random()) *256);
-document.getElementById(arr[5]).style.backgroundColor =  "rgb("+ r6 + " , "+ g6 +" , "+ b6 +")";
+        let r6 = Math.floor((Math.random()) *256);
+        let g6 = Math.floor((Math.random()) *256);
+        let b6 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[5]).style.backgroundColor =  "rgb("+ r6 + " , "+ g6 +" , "+ b6 +")";
 
-let r7 = Math.floor((Math.random()) *256);
-let g7 = Math.floor((Math.random()) *256);
-let b7 = Math.floor((Math.random()) *256);
-document.getElementById(arr[6]).style.backgroundColor =  "rgb("+ r7 + " , "+ g7 +" , "+ b7 +")";
+        let r7 = Math.floor((Math.random()) *256);
+        let g7 = Math.floor((Math.random()) *256);
+        let b7 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[6]).style.backgroundColor =  "rgb("+ r7 + " , "+ g7 +" , "+ b7 +")";
 
-let r8 = Math.floor((Math.random()) *256);
-let g8 = Math.floor((Math.random()) *256);
-let b8 = Math.floor((Math.random()) *256);
-document.getElementById(arr[7]).style.backgroundColor =  "rgb("+ r8 + " , "+ g8 +" , "+ b8 +")";
+        let r8 = Math.floor((Math.random()) *256);
+        let g8 = Math.floor((Math.random()) *256);
+        let b8 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[7]).style.backgroundColor =  "rgb("+ r8 + " , "+ g8 +" , "+ b8 +")";
 
-let r9 = Math.floor((Math.random()) *256);
-let g9 = Math.floor((Math.random()) *256);
-let b9 = Math.floor((Math.random()) *256);
-document.getElementById(arr[8]).style.backgroundColor =  "rgb("+ r9 + " , "+ g9 +" , "+ b9 +")";
+        let r9 = Math.floor((Math.random()) *256);
+        let g9 = Math.floor((Math.random()) *256);
+        let b9 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[8]).style.backgroundColor =  "rgb("+ r9 + " , "+ g9 +" , "+ b9 +")";
 
-let r10 = Math.floor((Math.random()) *256);
-let g10 = Math.floor((Math.random()) *256);
-let b10 = Math.floor((Math.random()) *256);
-document.getElementById(arr[9]).style.backgroundColor =  "rgb("+ r10 + " , "+ g10 +" , "+ b10 +")";
+        let r10 = Math.floor((Math.random()) *256);
+        let g10 = Math.floor((Math.random()) *256);
+        let b10 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[9]).style.backgroundColor =  "rgb("+ r10 + " , "+ g10 +" , "+ b10 +")";
 
-let r11 = Math.floor((Math.random()) *256);
-let g11 = Math.floor((Math.random()) *256);
-let b11 = Math.floor((Math.random()) *256);
-document.getElementById(arr[10]).style.backgroundColor =  "rgb("+ r11 + " , "+ g11 +" , "+ b11 +")";
+        let r11 = Math.floor((Math.random()) *256);
+        let g11 = Math.floor((Math.random()) *256);
+        let b11 = Math.floor((Math.random()) *256);
+        document.getElementById(arr[10]).style.backgroundColor =  "rgb("+ r11 + " , "+ g11 +" , "+ b11 +")";
 
-function guess(){
-    if(document.activeElement.id == index){
-        document.getElementById("colorName").innerHTML = "You Win!!";
-        document.getElementById("colorName").style.color = "darkgreen";
-    }
-    else{
-        document.getElementById("colorName").innerHTML = "Your Guess is Wrong !!";
-        document.getElementById("colorName").style.color = "red";
-    }
-    document.getElementsByClassName("btn")[0].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[1].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[2].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[3].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[4].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[5].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[6].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[7].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[8].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[9].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[10].removeAttribute("onclick");
-    document.getElementsByClassName("btn")[11].removeAttribute("onclick");
-}
+        function guess(){
+            if(document.activeElement.id == index){
+                document.getElementById("colorName").innerHTML = "You Win!!";
+                document.getElementById("colorName").style.color = "darkgreen";
+            }
+            else{
+                document.getElementById("colorName").innerHTML = "Your Guess is Wrong !!";
+                document.getElementById("colorName").style.color = "red";
+            }
+            document.getElementsByClassName("btn")[0].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[1].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[2].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[3].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[4].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[5].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[6].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[7].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[8].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[9].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[10].removeAttribute("onclick");
+            document.getElementsByClassName("btn")[11].removeAttribute("onclick");
+        }
 
-function replay(){
-    window.location.reload();
-}
+        function replay(){
+             window.location.reload();
+        }
     </script>
 </body>
 </html>
