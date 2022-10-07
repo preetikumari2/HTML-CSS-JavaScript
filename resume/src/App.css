@@ -1,5 +1,154 @@
 .App {
-  text-align: center;
+  justify-content: center;
+display: flex;
+  
+}
+
+#details{
+  text-align: left;
+  justify-content: center;
+  background-color: bisque;
+  padding-left: 10px;
+  
+}
+#contact{
+  padding-top: 160px;
+  
+}
+.contacts{
+  color: blue;
+  
+}
+.email{
+  color: rgb(246, 74, 74);
+}
+
+.phone{
+  color: rgb(246, 74, 74);
+}
+
+.add{
+  color: rgb(246, 74, 74);
+}
+
+.skill{
+  color: blue;
+  
+}
+.technic{
+  color: rgb(246, 74, 74);
+}
+.listoftech{
+  font-family: 'Times New Roman', Times, serif;
+}
+.language{
+  color: rgb(246, 74, 74);
+}
+.listoflang{
+  padding-left: 0px;
+  font-family: 'Times New Roman', Times, serif
+}
+.interest{
+  padding-left: 0px;
+  color: rgb(246, 74, 74);
+}
+.hobbies{
+  padding-left: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#name{
+  text-align: right;
+  justify-content: center;
+  text-align-last: top;
+  background-color: beige;
+  padding-right: 10px;
+}
+.myname{
+padding-right: 200px;
+color: red;
+}
+.be{
+ padding-right: 150px;
+ color: rgb(246, 74, 74);
+}
+.profilehead{
+  color: blue;
+  padding-right: 220px;
+
+}
+.profilesumm{
+  justify-content: center;
+  
+  
+}
+.expe{
+  color: blue;
+  padding-right: 260px;
+}
+.company{
+  color: rgb(246, 74, 74);
+  padding-right: 125px;
+}
+.intership{
+  color: blue;
+  padding-right: 260px;
+}
+.interncomp{
+  color: rgb(246, 74, 74);
+  padding-right: 35px;
+}
+.internsumm{
+  justify-content: flex-start;
+}
+.project{
+  color: blue;
+  padding-right: 305px;
+}
+.projname1{
+  color: rgb(246, 74, 74);
+  padding-right: 40px;
+}
+.proj1summ{
+  padding-right: 20px;
+
+}
+.projname2{
+  color: rgb(246, 74, 74);
+  padding-right: 190px;
+}
+.proj2summ{
+  justify-content: right;
+}
+.education{
+  color: blue;
+  padding-right: 260px;
+}
+.degreeclg{
+  color: rgb(246, 74, 74);
+  padding-right: 120px;
+}
+.grad{
+  padding-right: 200px;
+}
+.puclg{
+  color: rgb(246, 74, 74);
+  padding-right: 150px;
+}
+.puc{
+  padding-right: 370px;
+}
+.certificate{
+  color: blue;
+  padding-right: 240px;
+}
+.iot{
+ font-family: 'Times New Roman', Times, serif;
+ padding-right: 280px;
+}
+.blockchain{
+  font-family: 'Times New Roman', Times, serif;
+  padding-right: 155px;
 }
 
 .App-logo {
