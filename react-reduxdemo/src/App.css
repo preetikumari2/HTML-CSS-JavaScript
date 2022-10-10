@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -35,28 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  
 }
-
-.shopping-card {
-  justify-content: space-between;
-  background-color: black;
-  padding: 20px 30px;
-  color: white;
-  font-size: 20px;
-}
-button{
- background-color: rgb(3, 183, 3);
-}
-
-.product-item {
-  padding: 20px;
-}
-.CartList{
-  text-align: justify;
-}
-

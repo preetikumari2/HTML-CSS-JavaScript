@@ -10,7 +10,7 @@ function CartList({ cart }) {
     }, [cart])
 
     return (
-        <div>
+        <div className='CartList'>
             {
                 CART?.map((cartItem, cartindex) => {
                     return (
