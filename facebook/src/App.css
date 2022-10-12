@@ -1,0 +1,147 @@
+.Navigation{
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+}
+#facebooklogo{
+  width: 38px;
+  height: 36px;
+}
+.search{
+  text-align: justify;
+  /* justify-content: space-between; */
+  display: flex;
+  
+}
+#peoplesearch{
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.153);
+  
+}
+.links{
+  justify-content: space-around;
+  display: flex;
+}
+.active{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.notify{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.home{
+  background-color: rgba(128, 128, 128, 0.153);
+}
+#img1{
+  height: 80vh;
+  padding-left: 160px;
+}
+
+.video{
+  padding-left: 470px;
+  background-color: rgba(128, 128, 128, 0.153);
+}
+.vd{
+  padding: 20px;
+  display: flex;
+}
+.market{
+  background-color: rgba(128, 128, 128, 0.153);
+  padding-left: 120px; 
+}
+#img2{
+  height: 500px;
+  width: 1000px;
+}
+.gaming{
+  background-color: rgba(128, 128, 128, 0.153);
+  padding-left: 80px;
+}
+#game1{
+  height: 300px;
+  width: 500px;
+  padding: 20px;
+}
+.Notification{
+  background-color: rgba(128, 128, 128, 0.153);
+}
+#noti{
+  width: 70%;
+  height: 54%;
+  padding-left: 150px;
+}
+.mg{
+  background-color: rgba(128, 128, 128, 0.153);
+}
+.message{
+ text-align: center;
+ font-weight: bold;
+ font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.mesge{
+ text-align: center;
+ font-weight: bold;
+ font-family: Arial, Helvetica, sans-serif;
+ color: black;
+}
+.profile{
+  background-color: rgba(128, 128, 128, 0.153);
+}
+.prof{
+  text-align: center;
+  font-weight: 100;
+ font-family: Arial, Helvetica, sans-serif;
+ justify-content: center;
+}
+.groups{
+  background-color: rgba(128, 128, 128, 0.153);
+  display: flex;
+  padding-left: 200px;
+}
+.create{
+  padding-top: 400px;
+}
+.foot{
+  text-align: center;
+  padding: 5px;
+  background-color: #61dafb;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
