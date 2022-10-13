@@ -7,6 +7,9 @@ import Gaming from "./FacebookPages/Gaming";
 import Profile from "./FacebookPages/Profile";
 import Notification from "./FacebookPages/Notification";
 import Messenger from "./FacebookPages/Messenger";
+import { Login } from "./FacebookPages/Login";
+import SignUp from "./FacebookPages/SignUp";
+import Protected from "./FacebookPages/Protected";
 import './App.css';
 
 function App() {
@@ -29,17 +32,22 @@ function App() {
       <div>
         <Link to="/Notification"><a class="notify" href="#"><i class="fa fa-fw fa-bell"></i></a></Link>
         <Link to="/Messenger"><a class="notify" href="#"><i class="fa fa-fw fa-comment"></i></a></Link>
+        <Link to="/Login">Login</Link>
+        <Link to="/SignUp" >SignUp</Link>
       </div>
       </nav>
       <Routes>
-      <Route path="/" element={<Home />} />
-        <Route path="/Video" element={<Video />} />
-        <Route path="/MarketPlace" element={<MarketPlace />} />
-        <Route path="/Groups" element={<Groups />} />
-        <Route path="/Gaming" element={<Gaming />} />
-        <Route path="/Profile" element={<Profile />} /> 
-        <Route path="/Notification" element={<Notification />} />
-        <Route path="/Messenger" element={<Messenger />} />
+      <Route path="/" element={<Protected Component = {Home} />} />
+        <Route path="/Video" element={<Protected Component = {Video} />} />
+        <Route path="/MarketPlace" element={<Protected Component = {MarketPlace} />} />
+        <Route path="/Groups" element={<Protected Component = {Groups} />} />
+        <Route path="/Gaming" element={<Protected Component = {Gaming} />} />
+        <Route path="/Profile" element={<Protected Component = {Profile} />} /> 
+        <Route path="/Notification" element={<Protected Component = {Notification} />} />
+        <Route path="/Messenger" element={<Protected Component = {Messenger} />} />
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/SignUp" element={<Protected Component = {SignUp} />} />
+
       </Routes>
       <div className="foot">
       <footer> <h3>Copyright &copy;  2022, Reserved</h3> </footer>

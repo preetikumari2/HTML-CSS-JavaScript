@@ -106,6 +106,13 @@
 .create{
   padding-top: 400px;
 }
+.logincontent{
+  background-color: rgba(128, 128, 128, 0.153); 
+}
+.container{
+  box-sizing: border-box;
+  border: black;
+}
 .foot{
   text-align: center;
   padding: 5px;
