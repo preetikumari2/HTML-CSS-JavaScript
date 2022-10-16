@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore} from 'redux'
-import reducer from './reducer';
+import TodoReducers from './Reducer/TodoReducers';
 
 
-const store = createStore(reducer);
+const store = createStore(TodoReducers);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
