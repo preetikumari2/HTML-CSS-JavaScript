@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import MainDash from '../Dashboard/MainDash/MainDash';
 import './Login.css'
 
 function Login() {
@@ -18,7 +18,7 @@ function Login() {
         
         <div className='log'>
             { 
-            getEmail && getpassword ? <Sidebar /> :
+            getEmail && getpassword ? <MainDash /> :
             <form onSubmit={handleSubmit} >
                 <div className='mail'>
                     <input type="text" ref={email} placeholder='Enter Email'/>
