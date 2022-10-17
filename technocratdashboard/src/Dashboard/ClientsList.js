@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const Clients=()=>
 {
-    const [clients,setClients] = useState([])
+    const [clients, setClients] = useState([])
     const getClients=()=>
     {
         fetch('https://jsonplaceholder.typicode.com/todos/')
@@ -10,10 +10,10 @@ export const Clients=()=>
   .then(json =>{setClients(json)});
     }
     return(
-        <div id='clients1'>
+        <div id='clientsList'>
             <div className="middle">
-            <h3> Please click below for Clients details..</h3>
-            <button id='client-btn' onClick={getClients}>Show Clients</button>
+            
+            <button id='client-btn' onClick={getClients}>Clients</button>
             </div>
             
             <div >
